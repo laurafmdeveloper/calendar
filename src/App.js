@@ -7,6 +7,9 @@ import getTimer from './services/timerservice'
 import Calendar from './components/Calendar';
 
 
+
+// Instancia pubSub a nivel global
+// contexto / estado a nivel GLOBAL) - - 
 const pubSub = new PubSub()
 const timer = getTimer(TimerInterface, pubSub)
 

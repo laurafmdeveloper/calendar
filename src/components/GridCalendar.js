@@ -7,7 +7,10 @@ import { CHANELS } from "../services/chanels";
 import './GridCalendar.css'
 export default function GridCalendar() {
 
+    // contexto global
+    // porque el ultimo  dia del mes a las 23 59, deberia cambiar el mes
     const pubSub = useContext(TimerContext);
+    // contexto local 
     const pubSubCalendar = useContext(CalendarContex)
     
     let [days,setDays] = useState(CalendarService.getDays(new Date()));   

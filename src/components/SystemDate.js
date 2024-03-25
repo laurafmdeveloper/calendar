@@ -11,7 +11,7 @@ export default function SystemDate(){
     let [date,setDate] = useState(new Date());   
     useEffect(()=>{
         const dispose = pubSub.on(CHANELS.CHANGE_DATE,(_date)=>{
-            if(!CalendarService.isToday(date)){
+            if(!CalendarService.isToday(date)){ // a las 23:59 nueva fecha, hoy sera mañana
                 setDate(_date)
             }            
         })    
